@@ -1,0 +1,55 @@
+		<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+
+
+					<div ng-controller="mainController">
+						<h2>Login Form</h2>
+										
+
+					<form name="loginForm" ng-submit="login(loginForm)" novalidate> 
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" name="email" ng-model="user.email" class="form-control" id="exampleInputEmail1" placeholder="Email" required>
+
+					    <span class="error" ng-if="loginForm.email.$touched || loginForm.$submitted">
+						    <span ng-if="loginForm.email.$error.email">
+						    	Please enter valid email. 
+
+						    </span>
+						     <span ng-if="loginForm.email.$error.required">
+						    	Please enter valid email. 
+						    </span>
+						</span>
+
+					  </div>
+					  <div class="form-group">
+
+					    <label for="exampleInputPassword1">Password</label>
+					    <input type="password" name="password" ng-model="user.password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-maxlength="10" ng-minlength="5"  allnumbers required>
+
+					    <span class="error" ng-if="loginForm.password.$touched || loginForm.$submitted">
+						    <span ng-if="loginForm.password.$error.maxlength">
+						    	Max 10 char expected. 
+
+						    </span>
+						     <span ng-if="loginForm.password.$error.minlength">
+						    	Min 5 char expected 
+						    </span>
+						     <span ng-if="loginForm.password.$error.required">
+						    	Please enter password 
+						    </span>
+						</span>
+
+
+
+					  </div>
+					 
+					  <button type="submit" class="btn btn-success">Submit</button>
+					</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
