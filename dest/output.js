@@ -334,26 +334,26 @@ app.config(function($stateProvider,$urlRouterProvider)
   $stateProvider
     .state('login', {
       url: "/login",
-      templateUrl: "../templates/login.html"
+      templateUrl: "templates/login.html"
     }).state('signup', {
       url: "/signup",
-      templateUrl: "../templates/signup.html",
+      templateUrl: "templates/signup.html",
       controller:'signUpController'
     }).state('home', {
       url: "/home",
-      templateUrl: "../templates/home.html",
+      templateUrl: "templates/home.html",
       
     }).state('search', {
       url: "/search",
-      templateUrl: "../templates/search.html",
+      templateUrl: "templates/search.html",
       controller:'searchController'
     }).state('aboutus', {
       url: "/aboutus",
-      templateUrl: "../templates/aboutus.html",
+      templateUrl: "templates/aboutus.html",
       controller:'aboutUsController'
     }).state('contactus', {
       url: "/contactus",
-      templateUrl: "../templates/contactus.html",
+      templateUrl: "templates/contactus.html",
       controller:'contactUsController'
     });
     
