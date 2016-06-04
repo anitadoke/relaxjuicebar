@@ -4,26 +4,34 @@
 <body>
 	<div class ="container">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-	           <span class="glyphicon glyphicon-search"></span>
-	           <div class="form-group">
-	           <input type="text" ng-model="test" class="form-control input-lg">
-	           </div>
+			<div class="col-md-4 ">
+				<div class="form-group has-feedback has-feedback-left">
+					<input type="text" ng-model="test" class="form-control input-lg" placeholder="Search">
+	            <span class="form-control-feedback glyphicon glyphicon-search "></span>
 	           
-               <div>
+	           
+	           </div>
+	       </div>
+	           
+               <div class="col-md-8">
                <ul class="list-group" ng-repeat="j in juice | filter:test" >
-				  <li class="list-group-item list-group-item-success">{{j.type}}</li>
- 				  <li class="list-group-item list-group-item-info">{{j.name}}</li>
+				  <li class="list-group-item list-group-item-warning">{{j.type}}</li>
+ 				  <li class="list-group-item list-group-item-warning">{{j.name}}</li>
 				  <li class="list-group-item list-group-item-warning">{{j.contents}}</li>
- 				  <li class="list-group-item list-group-item-danger">{{j.price}}</li>
+ 				  <li class="list-group-item list-group-item-warning">{{j.price}}</li>
  				  <li class="list-group-item list-group-item-default">
- 				    <button type="button" class="btn btn-primary btn-sm">Details</button>
- 				    <button type="button" class="btn btn-default btn-sm">Order</button>
- 				    <button type="button" class="btn btn-success btn-sm">Payment</button>
+ 				  
+                     <p class="button">
+ 				    
+ 				       <a href="#/details"><button type="button" class="btn btn-primary btn-xs">Details</button></a>
+ 				    <button type="button" class="btn btn-default btn-xs ">Order</button>
+ 				    <button type="button" class="btn btn-success btn-xs ">Payment</button>
+ 				     </P>
  				  </li>
 				</ul>
-			    </div>
-              <div>
+			 
+              <div class="row">
+              	
                <ul class="pagination">
 			  	<li class="active"><a href="#">1</a></li>
 			    <li><a href="#">2</a></li>
@@ -31,9 +39,11 @@
 			    <li><a href="#">4</a></li>
 			    <li><a href="#">5</a></li>
 			  </u1>
+			
 		   </div>
 
 			</div>
+			   </div>
 		</div>
 	</div>
 </body>
